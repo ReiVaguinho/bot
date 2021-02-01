@@ -1,114 +1,35 @@
 
 const help = (prefix) => { 
-	return `                 
+	return `
 ┌─────────❶.❷────────┐
-™ 𝐁𝐎𝐓 𝐙𝐊 𝐒𝐇𝐈𝐓𝐒 𝐎𝐅𝐅 ™ 
+	™ 𝐁𝐎𝐓 𝐙𝐊 𝐒𝐇𝐈𝐓𝐒 𝐎𝐅𝐅 ™
 └─────────❶.❷────────┘
-┌─────────❶.❷────────┐
-𝐂𝐑𝐈𝐀𝐃𝐎𝐑:𝙈𝘼𝙏𝙃𝙀𝙐𝙎𝙕𝙆
-𝙉𝙪́𝙢𝙚𝙧𝙤 𝙙𝙤 𝙘𝙧𝙞𝙖𝙙𝙤𝙧
-Wa.me//+5543988164175
-└─────────❶.❷────────┘
+
+O matheus é um gay
+
 ╔══════════════════════
-║ ✔︎𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒 𝐋𝐈𝐒𝐓𝐀𝐃𝐎𝐒✔︎
-╠══════════════════════
-║   ✔︎𝐄𝐗𝐂𝐋𝐔𝐒𝐈𝐕𝐎 𝐏𝐀𝐑𝐀 𝐀𝐃𝐌'𝐒✔︎
 ║╭─────────────────────
-║├> ${prefix}welcome [0/1]
-║├> ${prefix}bv [0/1]
-║├> ${prefix}bemvindo [0/1]
-║├> ${prefix}boasvindas [0/1]
-║├────> desativar/ativa bv
+║├─────𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒──────
 ║├─────────────────────
-║├> ${prefix}add 55xxx
-║├> ${prefix}adicionar 55xxx
-║├────> add membro
-║├─────────────────────
-║├> ${prefix}kick @membro
-║├> ${prefix}ban @membro
-║├> ${prefix}remover @membro
-║├────> remover membro
-║├─────────────────────
-║├> ${prefix}promote @membro
-║├> ${prefix}promover @membro
-║├────> promover a ADM
-║├─────────────────────
-║├> ${prefix}demote @adm
-║├> ${prefix}promover @adm
-║├────> rebaixar a membro
-║├─────────────────────
-║├> ${prefix}grup abrir/fechar
-║├> ${prefix}group abrir/fechar
-║├> ${prefix}grupo abrir/fechar
-║├────> bem específico ;-;
-║├─────────────────────
-║├> ${prefix}setname seu txt
-║├> ${prefix}mudarnome seu txt
-║├────> troca nome do grupo
-║├─────────────────────
-║├> ${prefix}setdesc seu txt
-║├> ${prefix}mudardesc seu txt
-║├────> troca descrição
-║├─────────────────────
-║├> ${prefix}mudarfoto
-║├────> mudar foto do grupo
-║├─────────────────────
-║├> ${prefix}marcar
-║├────> marcação
-║├─────────────────────
-║├> ${prefix}marcar2
-║├────> marcação 2
-║├─────────────────────
-║├> ${prefix}marcar3
-║├────> marcação
-║├─────────────────────
-║├> ✔︎𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃/𝐋𝐈𝐍𝐊✔︎
-║├─────────────────────
-║├> ${prefix}tiktokstalk Nick da conta
-║├────> stalk de tiktok
-║├─────────────────────
-║├> ${prefix}fototiktok
-║├────> foto do tiktok
-║├─────────────────────
-║├> ${prefix}ytmp4 link
-║├> ${prefix}ytvideo link
-║├> ${prefix}ytbuscar link
-║├> ${prefix}ytbaixa link
-║├────> baixa vídeo do YouTube
-║├─────────────────────
-║├>✔𝐌𝐈𝐃𝐈𝐀/𝐎𝐔𝐓𝐑𝐎𝐒︎✔︎
-║├─────────────────────
-║├> ${prefix}sticker
-║├> ${prefix}stiker
 ║├> ${prefix}fig
-║├> ${prefix}figurinha
 ║├────> fazer fig cm foto/gif
 ║├─────────────────────
 ║├> ${prefix}tts seu txt
-║├> ${prefix}gtts seu txt
-║├> ${prefix}audio seu txt
 ║├────> converter txt em áudio
 ║├─────────────────────
-║├> ${prefix}toimg marca fig
 ║├> ${prefix}converter marca fig
 ║├────> converter fig em foto
 ║├─────────────────────
 ║├> ${prefix}txtdafoto
-║├> ${prefix}ocr
 ║├────> pega txt de foto
 ║├─────────────────────
-║├> ${prefix}wait marca foto
 ║├> ${prefix}pesquisar marca foto
 ║├────> pesquisa por anime de ft
 ║├─────────────────────
-║├> ${prefix}listaadms
-║├> ${prefix}listadmins
 ║├> ${prefix}adms
 ║├────> lista dos adms
 ║├─────────────────────
 ║├> ${prefix}cachorro
-║├> ${prefix}auau
-║├> ${prefix}dog
 ║├────> dog fofo aleatório
 ║├─────────────────────
 ║├> ${prefix}pokemon
@@ -129,16 +50,17 @@ Wa.me//+5543988164175
 ║├> ${prefix}lofi
 ║├────> foto única de lofi
 ║├─────────────────────
-║├> ${prefix}map 0000-0000 
-║├> ${prefix} ${prefix}mapa 0000-0000 
+║├> ${prefix}map 0000-0000
 ║├────> pega foto do local
 ║├─────────────────────
-║├>✔︎𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒 𝐃𝐎 𝐂𝐑𝐈𝐀𝐃𝐎𝐑✔︎
+║├> ${prefix}views
+║├────> aumente suas views
+║├─────────────────────
+║├──𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒 𝐃𝐎 𝐂𝐑𝐈𝐀𝐃𝐎𝐑──
 ║├─────────────────────
 ║├> ${prefix}hidetag
 ║├────> esconde tag
 ║├─────────────────────
-║├> ${prefix}clearall
 ║├> ${prefix}limpar
 ║├────> limpa zap do bot
 ║├─────────────────────
@@ -155,26 +77,78 @@ Wa.me//+5543988164175
 ║├────> [?]
 ║├─────────────────────
 ║├> ${prefix}clonar
-║├> ${prefix}clone
 ║├────> clonar tag
 ║├─────────────────────
-║├>  ✔︎𝐒𝐔𝐏𝐎𝐑𝐓𝐄✔︎
+║├──✔︎𝐄𝐗𝐂𝐋𝐔𝐒𝐈𝐕𝐎 𝐏𝐀𝐑𝐀 𝐀𝐃𝐌'𝐒✔︎─
+║├───────────────────── 
+║├> ${prefix}welcome [0/1]   
+║├────> desativar/ativa bv   
+║├─────────────────────      
+║├> ${prefix}add 55xxx
+║├────> add membro           
+║├─────────────────────
+║├> ${prefix}ban @membro
+║├────> remover membro
+║├─────────────────────
+║├> ${prefix}promover @membro
+║├────> promover a ADM
+║├─────────────────────
+║├> ${prefix}promover @adm
+║├────> rebaixar a membro
+║├─────────────────────
+║├> ${prefix}grupo abrir/fechar
+║├────> bem específico ;-;
+║├─────────────────────
+║├> ${prefix}mudarnome seu txt
+║├────> troca nome do grupo
+║├─────────────────────
+║├> ${prefix}mudardesc seu txt
+║├────> troca descrição
+║├─────────────────────
+║├> ${prefix}mudarfoto
+║├────> mudar foto do grupo
+║├─────────────────────
+║├> ${prefix}marcar
+║├────> marcação
+║├─────────────────────
+║├> ${prefix}marcar2
+║├────> marcação 2
+║├─────────────────────
+║├> ${prefix}marcar3
+║├────> marcação
+║├─────────────────────
+║├─✔︎𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃/𝐋𝐈𝐍𝐊✔︎─
+║├─────────────────────
+║├> ${prefix}tiktokstalk Nick da conta
+║├────> stalk de tiktok
+║├─────────────────────
+║├> ${prefix}fototiktok
+║├────> foto do tiktok
+║├─────────────────────
+║├> ${prefix}ytmp4 link
+║├────> baixa vídeo do YouTube
+║├─────────────────────
+║├─────✔︎𝐒𝐔𝐏𝐎𝐑𝐓𝐄✔︎─────
 ║├─────────────────────
 ║├> ${prefix}bug
-║├> ${prefix}reportar
-║├> ${prefix}reportarbug
 ║├────> reportar bug ao criador
 ║├─────────────────────
 ║├> ${prefix}sigla nova sigla
-║├> ${prefix}setprefix
 ║├────> troca sigla de comandos
-║└─────────────────────
+║└─────────────────── 
 ╚══════════════════════
+
+┌─────────❶.❷────────┐
+𝐂𝐑𝐈𝐀𝐃𝐎𝐑:𝙈𝘼𝙏𝙃𝙀𝙐𝙎𝙕𝙆
+𝙉𝙪́𝙢𝙚𝙧𝙤 𝙙𝙤 𝙘𝙧𝙞𝙖𝙙𝙤𝙧
+Wa.me//+5543988164175
+└─────────❶.❷────────┘
+
+Grupo: https://chat.whatsapp.com/CVpjMNftNqJEPi1D6tdl7A
 
 <══════════════════════>
 ✔ 𝘽𝙊𝙏 𝙕𝙆 𝙎𝙃𝙄𝙏𝙎 𝐎𝐅𝐅 ︎✔︎ 
 <══════════════════════>
-
 `
 }
 exports.help = help
