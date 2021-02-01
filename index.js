@@ -20,6 +20,7 @@ const fs = require("fs")
 const { color, bgcolor } = require('./lib/color')
 const { help } = require('./lib/help')
 const { donasi } = require('./lib/donasi')
+const { views } = require('./lib/views')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
 const kagApi = require('@kagchi/kag-api')
@@ -36,7 +37,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG: MatheusZK;\n' 
             + 'TEL;type=CELL;type=VOICE;waid=554388164175:+55 43 8816-4175\n' 
             + 'END:VCARD' 
-prefix = '!'
+prefix = '/'
 blocked = []          
 
 /********** LOAD FILE **************/
@@ -47,11 +48,11 @@ const time = moment().tz('Asia/Jakarta').format("HH:mm:ss")
 const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
 const bulan = arrayBulan[moment().format('MM') - 1]
 const config = {
-    XBOT: '𝐁𝐎𝐓', 
+    XBOT: '™ 𝐁𝐎𝐓 𝐙𝐊 𝐒𝐇𝐈𝐓𝐒 𝐎𝐅𝐅 ™', 
     instagram: '', 
-    nomer: 'wa.me/554388164175',
+    nomer: 'Matheus',
     youtube: '', 
-    whatsapp: 'Comming soon', 
+    whatsapp: 'wa.me/554388164175', 
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
     waktu: time
 }
@@ -210,6 +211,9 @@ client.on('group-participants-update', async (anu) => {
 				case 'menu':
 					client.sendMessage(from, help(prefix), text)
 					break
+				case 'views':
+					client.sendMessage(from, views(), text)
+					break
 				case 'donasi':
 				case 'donate':
 					client.sendMessage(from, donasi(), text)
@@ -246,12 +250,12 @@ client.on('group-participants-update', async (anu) => {
 					}
 					client.sendMessage(from, options, text)
 					break
-case 'lofi':
+				case 'lofi':
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL9hZBPRo16fIhsIus3t1je2oAU23pQqBpfw&usqp=CAU`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️amoo lofi'})
 					break
-                 case 'logoph':
+                case 'logoph':
 					var gh = body.slice(9)
 					var gbl1 = gh.split("|")[0];
 					var gbl2 = gh.split("|")[1];
@@ -275,7 +279,7 @@ case 'lofi':
                     client.sendMessage('554191721216@s.whatsapp.net', options, text, {quoted: mek})
                     reply('PDP PARSA, BUG FOI REPORTADO, SE FOR MENTIRA VAI SER COBRADO🙄✌🏼')
                     break
-					case 'marcar':
+				case 'marcar':
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -285,7 +289,7 @@ case 'lofi':
 					}
 					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
 					break
-                   case 'marcar2':
+                case 'marcar2':
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -295,7 +299,7 @@ case 'lofi':
 					}
 					reply(teks)
 					break
-                  case 'marcar3':
+                case 'marcar3':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
@@ -358,7 +362,7 @@ case 'lofi':
                     reply(anu.result)
 			        break
 			    case 'map':
-			case 'mapa': 
+				case 'mapa': 
                 anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`, {method: 'get'})
                 buffer = await getBuffer(anu.gambar)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: `${body.slice(5)}`})
@@ -497,13 +501,13 @@ case 'lofi':
 					}
 					reply('esta limpo mestre  :)')
 					break
-			       case 'bloquear':
+			    case 'bloquear':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
 					client.blockUser (`${body.slice(7)}@c.us`, "add")
 					client.sendMessage(from, `membro bloqueado ${body.slice(7)}@c.us`, text)
 					break
-                    case 'desbloquear':
+                case 'desbloquear':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
 				    client.blockUser (`${body.slice(9)}@c.us`, "remove")
@@ -555,9 +559,9 @@ case 'lofi':
 						reply('Falha ao adicionar, talvez porque seja privado')
 					}
 					break
-					case 'grup':
-					case 'group':
-					case 'grupo':
+				case 'grup':
+				case 'group':
+				case 'grupo':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -569,33 +573,32 @@ case 'lofi':
 						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 					break
-                    
-            case 'admin':
-            case 'owner':
-            case 'creator':
-            case 'criador':
-            case 'keke':
-                  client.sendMessage(from, {displayname: "keke adm", vcard: vcard}, MessageType.contact, { quoted: mek})
-       client.sendMessage(from, 'Este é o número do meu criador ^-^ ',MessageType.text, { quoted: mek} )
-           break    
-           case 'setname':
-           case 'mudarnome':
-                if (!isGroup) return reply(mess.only.group)
-			    if (!isGroupAdmins) return reply(mess.only.admin)
-				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-                client.groupUpdateSubject(from, `${body.slice(9)}`)
-                client.sendMessage(from, 'nome do grupo alterado cm sucesso', text, {quoted: mek})
-                break
+				case 'admin':
+				case 'owner':
+				case 'creator':
+				case 'criador':
+				case 'keke':
+                  	client.sendMessage(from, {displayname: "keke adm", vcard: vcard}, MessageType.contact, { quoted: mek})
+      				client.sendMessage(from, 'Este é o número do meu criador ^-^ ',MessageType.text, { quoted: mek} )
+           			break    
+           		case 'setname':
+           		case 'mudarnome':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					client.groupUpdateSubject(from, `${body.slice(9)}`)
+					client.sendMessage(from, 'nome do grupo alterado cm sucesso', text, {quoted: mek})
+					break
                 case 'setdesc':
                 case 'mudardesc':
-                if (!isGroup) return reply(mess.only.group)
-			    if (!isGroupAdmins) return reply(mess.only.admin)
-				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-                client.groupUpdateDescription(from, `${body.slice(9)}`)
-                client.sendMessage(from, 'descricao trocada cm sucesso', text, {quoted: mek})
-                break
-           case 'demote':
-           case 'rebaixar':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					client.groupUpdateDescription(from, `${body.slice(9)}`)
+					client.sendMessage(from, 'descricao trocada cm sucesso', text, {quoted: mek})
+					break
+				case 'demote':
+				case 'rebaixar':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -634,9 +637,9 @@ case 'lofi':
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break	
-			     	case 'kick':
-			case 'ban':
-			case 'remover':
+			    case 'kick':
+				case 'ban':
+				case 'remover':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -718,6 +721,7 @@ case 'lofi':
 					} else {
 						reply(' *use 1 para ativar ou 0 para desativar* \n *exemplo: ${prefix}welcome 1*')
 					}
+					break
 				case 'clone':
 				case 'clonar':
 					if (!isGroup) return reply(mess.only.group)
